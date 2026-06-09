@@ -32,6 +32,11 @@ permissions:
 env:
   DOCKER_BUILDKIT: '1'
   DOCKER_CLI_HINTS: 'false'
+  # We build images, not run browsers — skip puppeteer/playwright browser
+  # downloads during install (flaky over CI network and unneeded here).
+  PUPPETEER_SKIP_DOWNLOAD: 'true'
+  PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
 
 jobs:
   build-and-push:
