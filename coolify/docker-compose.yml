@@ -300,16 +300,26 @@ services:
   sign:
     image: ${HULY_IMAGE_REGISTRY:-ghcr.io/nexeon-ai}/huly-sign:${HULY_IMAGE_TAG:-ar}
     depends_on:
-      minio:
-        condition: service_healthy
-      redpanda:
-        condition: service_healthy
+      account:
+        condition: service_started
+    # The sign pod requires a PKCS#12 signing certificate. We ship a self-signed
+    # one (decoded from SIGN_CERT_B64) so document e-signing works out of the box.
+    # To use your own trusted cert, set SIGN_CERT_B64 (base64 of a .p12),
+    # CERTIFICATE_PASSWORD and SERVICE_ID in Coolify env.
+    command:
+      - sh
+      - -c
+      - 'echo "$$SIGN_CERT_B64" | base64 -d > /tmp/sign-cert.p12 && exec dumb-init node bundle.js'
     environment:
+      - PORT=4006
       - SECRET=${SECRET}
-      - QUEUE_CONFIG=redpanda:9092
-      - STORAGE_CONFIG=minio|minio?accessKey=minioadmin&secretKey=minioadmin
       - ACCOUNTS_URL=http://account:3000
       - STATS_URL=http://stats:4900
+      - STORAGE_CONFIG=minio|minio?accessKey=minioadmin&secretKey=minioadmin
+      - SERVICE_ID=${SIGN_SERVICE_ID:-huly-sign}
+      - CERTIFICATE_PATH=/tmp/sign-cert.p12
+      - CERTIFICATE_PASSWORD=${CERTIFICATE_PASSWORD:-huly}
+      - SIGN_CERT_B64=${SIGN_CERT_B64:-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}
     restart: unless-stopped
 
   # ─── Data export ──────────────────────────────────────────────────────────
