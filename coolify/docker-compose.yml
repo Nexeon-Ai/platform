@@ -240,6 +240,11 @@ services:
       - UPLOAD_URL=/files
       - ELASTIC_URL=http://elastic:9200
       - COLLABORATOR_URL=ws${SECURE:+s}://${HOST_ADDRESS}/_collaborator
+      # Required by the front starter (it process.exit(1)s if any is undefined),
+      # even though these integration services aren't part of this minimal stack.
+      - GMAIL_URL=http${SECURE:+s}://${HOST_ADDRESS}/_gmail
+      - CALENDAR_URL=http${SECURE:+s}://${HOST_ADDRESS}/_calendar
+      - TELEGRAM_URL=http${SECURE:+s}://${HOST_ADDRESS}/_telegram
       - STORAGE_CONFIG=minio|minio?accessKey=minioadmin&secretKey=minioadmin
       - TITLE=${TITLE:-Huly}
       - DEFAULT_LANGUAGE=${DEFAULT_LANGUAGE:-ar}
