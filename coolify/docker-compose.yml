@@ -27,16 +27,14 @@ services:
 
   cockroach:
     image: cockroachdb/cockroach:latest-v24.2
-    command: start-single-node --accept-sql-without-tls
-    environment:
-      - COCKROACH_DATABASE=${CR_DATABASE:-defaultdb}
-      - COCKROACH_USER=${CR_USERNAME:-root}
-      - COCKROACH_PASSWORD=${CR_USER_PASSWORD:-}
+    # Insecure single-node: no TLS/certs, root with no password. Matches the
+    # app DB_URL (sslmode=disable) and makes the healthcheck reliable. Fine for
+    # a single-node DB on the private compose network.
+    command: start-single-node --insecure
     volumes:
-      - cr_data:/cockroach/cockroach-data
-      - cr_certs:/cockroach/certs
+      - cockroach_data:/cockroach/cockroach-data
     healthcheck:
-      test: ['CMD-SHELL', "cockroach sql --certs-dir=/cockroach/certs --host=localhost:26257 -e 'SELECT 1' >/dev/null 2>&1 || exit 1"]
+      test: ['CMD-SHELL', "cockroach sql --insecure --host=localhost:26257 -e 'SELECT 1' >/dev/null 2>&1 || exit 1"]
       interval: 5s
       timeout: 10s
       retries: 30
@@ -246,8 +244,7 @@ services:
     restart: unless-stopped
 
 volumes:
-  cr_data:
-  cr_certs:
+  cockroach_data:
   redpanda:
   files:
   elastic:
