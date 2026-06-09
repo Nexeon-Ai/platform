@@ -73,7 +73,11 @@ jobs:
             --to @hcengineering/pod-collaborator \
             --to @hcengineering/pod-fulltext \
             --to @hcengineering/pod-stats \
-            --to @hcengineering/rekoni-service
+            --to @hcengineering/rekoni-service \
+            --to @hcengineering/pod-mail \
+            --to @hcengineering/pod-print \
+            --to @hcengineering/pod-sign \
+            --to @hcengineering/pod-export
 
       - name: Log in to GHCR
         uses: docker/login-action@v3
@@ -90,7 +94,7 @@ jobs:
           SHA="${GITHUB_SHA::12}"
           MOVING="${{ github.event.inputs.tag || 'ar' }}"
           # local hardcoreeng image name : published huly-<name> suffix
-          MAP="front:front transactor:transactor account:account workspace:workspace collaborator:collaborator fulltext:fulltext stats:stats rekoni-service:rekoni"
+          MAP="front:front transactor:transactor account:account workspace:workspace collaborator:collaborator fulltext:fulltext stats:stats rekoni-service:rekoni mail:mail print:print sign:sign export:export"
           for entry in $MAP; do
             src="hardcoreeng/${entry%%:*}"
             dst="${REG}/huly-${entry##*:}"

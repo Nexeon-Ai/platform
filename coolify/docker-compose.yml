@@ -19,7 +19,7 @@ services:
     command:
       - sh
       - -c
-      - 'echo c2VydmVyIHsKICAgIGxpc3RlbiA4MDsKICAgIHNlcnZlcl9uYW1lIF87CiAgICBjbGllbnRfbWF4X2JvZHlfc2l6ZSAxMDBNOwoKICAgICMgV2ViIGNsaWVudCAoZnJvbnQpIOKAlCBhbHNvIHNlcnZlcyAvZmlsZXMgdXBsb2Fkcy4KICAgIGxvY2F0aW9uIC8gewogICAgICAgIHByb3h5X3NldF9oZWFkZXIgSG9zdCAkaG9zdDsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtUmVhbC1JUCAkcmVtb3RlX2FkZHI7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Gb3IgJHByb3h5X2FkZF94X2ZvcndhcmRlZF9mb3I7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Qcm90byAkc2NoZW1lOwogICAgICAgIHByb3h5X3Bhc3MgaHR0cDovL2Zyb250OjgwODA7CiAgICB9CgogICAgbG9jYXRpb24gL19hY2NvdW50cyB7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBIb3N0ICRob3N0OwogICAgICAgIHByb3h5X3NldF9oZWFkZXIgWC1SZWFsLUlQICRyZW1vdGVfYWRkcjsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtRm9yd2FyZGVkLUZvciAkcHJveHlfYWRkX3hfZm9yd2FyZGVkX2ZvcjsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtRm9yd2FyZGVkLVByb3RvICRzY2hlbWU7CiAgICAgICAgcmV3cml0ZSBeL19hY2NvdW50cygvLiopJCAkMSBicmVhazsKICAgICAgICBwcm94eV9wYXNzIGh0dHA6Ly9hY2NvdW50OjMwMDAvOwogICAgfQoKICAgIGxvY2F0aW9uIC9fY29sbGFib3JhdG9yIHsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIEhvc3QgJGhvc3Q7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLVJlYWwtSVAgJHJlbW90ZV9hZGRyOwogICAgICAgIHByb3h5X3NldF9oZWFkZXIgWC1Gb3J3YXJkZWQtRm9yICRwcm94eV9hZGRfeF9mb3J3YXJkZWRfZm9yOwogICAgICAgIHByb3h5X3NldF9oZWFkZXIgWC1Gb3J3YXJkZWQtUHJvdG8gJHNjaGVtZTsKICAgICAgICBwcm94eV9odHRwX3ZlcnNpb24gMS4xOwogICAgICAgIHByb3h5X3NldF9oZWFkZXIgVXBncmFkZSAkaHR0cF91cGdyYWRlOwogICAgICAgIHByb3h5X3NldF9oZWFkZXIgQ29ubmVjdGlvbiAidXBncmFkZSI7CiAgICAgICAgcmV3cml0ZSBeL19jb2xsYWJvcmF0b3IoLy4qKSQgJDEgYnJlYWs7CiAgICAgICAgcHJveHlfcGFzcyBodHRwOi8vY29sbGFib3JhdG9yOjMwNzgvOwogICAgfQoKICAgIGxvY2F0aW9uIC9fdHJhbnNhY3RvciB7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBIb3N0ICRob3N0OwogICAgICAgIHByb3h5X3NldF9oZWFkZXIgWC1SZWFsLUlQICRyZW1vdGVfYWRkcjsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtRm9yd2FyZGVkLUZvciAkcHJveHlfYWRkX3hfZm9yd2FyZGVkX2ZvcjsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtRm9yd2FyZGVkLVByb3RvICRzY2hlbWU7CiAgICAgICAgcHJveHlfaHR0cF92ZXJzaW9uIDEuMTsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFVwZ3JhZGUgJGh0dHBfdXBncmFkZTsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIENvbm5lY3Rpb24gInVwZ3JhZGUiOwogICAgICAgIHJld3JpdGUgXi9fdHJhbnNhY3RvcigvLiopJCAkMSBicmVhazsKICAgICAgICBwcm94eV9wYXNzIGh0dHA6Ly90cmFuc2FjdG9yOjMzMzMvOwogICAgfQoKICAgICMgVHJhbnNhY3RvciBXZWJTb2NrZXQgdG9rZW5zIChKV1QgYmVnaW5zIHdpdGggZXlKKS4KICAgIGxvY2F0aW9uIH4gXi9leUogewogICAgICAgIHByb3h5X3NldF9oZWFkZXIgSG9zdCAkaG9zdDsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtUmVhbC1JUCAkcmVtb3RlX2FkZHI7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Gb3IgJHByb3h5X2FkZF94X2ZvcndhcmRlZF9mb3I7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Qcm90byAkc2NoZW1lOwogICAgICAgIHByb3h5X2h0dHBfdmVyc2lvbiAxLjE7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBVcGdyYWRlICRodHRwX3VwZ3JhZGU7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBDb25uZWN0aW9uICJ1cGdyYWRlIjsKICAgICAgICBwcm94eV9wYXNzIGh0dHA6Ly90cmFuc2FjdG9yOjMzMzM7CiAgICB9CgogICAgbG9jYXRpb24gL19yZWtvbmkgewogICAgICAgIHByb3h5X3NldF9oZWFkZXIgSG9zdCAkaG9zdDsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtUmVhbC1JUCAkcmVtb3RlX2FkZHI7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Gb3IgJHByb3h5X2FkZF94X2ZvcndhcmRlZF9mb3I7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Qcm90byAkc2NoZW1lOwogICAgICAgIHJld3JpdGUgXi9fcmVrb25pKC8uKikkICQxIGJyZWFrOwogICAgICAgIHByb3h5X3Bhc3MgaHR0cDovL3Jla29uaTo0MDA0LzsKICAgIH0KCiAgICBsb2NhdGlvbiAvX3N0YXRzIHsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIEhvc3QgJGhvc3Q7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLVJlYWwtSVAgJHJlbW90ZV9hZGRyOwogICAgICAgIHByb3h5X3NldF9oZWFkZXIgWC1Gb3J3YXJkZWQtRm9yICRwcm94eV9hZGRfeF9mb3J3YXJkZWRfZm9yOwogICAgICAgIHByb3h5X3NldF9oZWFkZXIgWC1Gb3J3YXJkZWQtUHJvdG8gJHNjaGVtZTsKICAgICAgICByZXdyaXRlIF4vX3N0YXRzKC8uKikkICQxIGJyZWFrOwogICAgICAgIHByb3h5X3Bhc3MgaHR0cDovL3N0YXRzOjQ5MDAvOwogICAgfQp9Cg== | base64 -d > /etc/nginx/conf.d/default.conf && exec nginx -g "daemon off;"'
+      - 'echo c2VydmVyIHsKICAgIGxpc3RlbiA4MDsKICAgIHNlcnZlcl9uYW1lIF87CiAgICBjbGllbnRfbWF4X2JvZHlfc2l6ZSAxMDBNOwoKICAgICMgV2ViIGNsaWVudCAoZnJvbnQpIOKAlCBhbHNvIHNlcnZlcyAvZmlsZXMgdXBsb2Fkcy4KICAgIGxvY2F0aW9uIC8gewogICAgICAgIHByb3h5X3NldF9oZWFkZXIgSG9zdCAkaG9zdDsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtUmVhbC1JUCAkcmVtb3RlX2FkZHI7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Gb3IgJHByb3h5X2FkZF94X2ZvcndhcmRlZF9mb3I7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Qcm90byAkc2NoZW1lOwogICAgICAgIHByb3h5X3Bhc3MgaHR0cDovL2Zyb250OjgwODA7CiAgICB9CgogICAgbG9jYXRpb24gL19hY2NvdW50cyB7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBIb3N0ICRob3N0OwogICAgICAgIHByb3h5X3NldF9oZWFkZXIgWC1SZWFsLUlQICRyZW1vdGVfYWRkcjsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtRm9yd2FyZGVkLUZvciAkcHJveHlfYWRkX3hfZm9yd2FyZGVkX2ZvcjsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtRm9yd2FyZGVkLVByb3RvICRzY2hlbWU7CiAgICAgICAgcmV3cml0ZSBeL19hY2NvdW50cygvLiopJCAkMSBicmVhazsKICAgICAgICBwcm94eV9wYXNzIGh0dHA6Ly9hY2NvdW50OjMwMDAvOwogICAgfQoKICAgIGxvY2F0aW9uIC9fY29sbGFib3JhdG9yIHsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIEhvc3QgJGhvc3Q7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLVJlYWwtSVAgJHJlbW90ZV9hZGRyOwogICAgICAgIHByb3h5X3NldF9oZWFkZXIgWC1Gb3J3YXJkZWQtRm9yICRwcm94eV9hZGRfeF9mb3J3YXJkZWRfZm9yOwogICAgICAgIHByb3h5X3NldF9oZWFkZXIgWC1Gb3J3YXJkZWQtUHJvdG8gJHNjaGVtZTsKICAgICAgICBwcm94eV9odHRwX3ZlcnNpb24gMS4xOwogICAgICAgIHByb3h5X3NldF9oZWFkZXIgVXBncmFkZSAkaHR0cF91cGdyYWRlOwogICAgICAgIHByb3h5X3NldF9oZWFkZXIgQ29ubmVjdGlvbiAidXBncmFkZSI7CiAgICAgICAgcmV3cml0ZSBeL19jb2xsYWJvcmF0b3IoLy4qKSQgJDEgYnJlYWs7CiAgICAgICAgcHJveHlfcGFzcyBodHRwOi8vY29sbGFib3JhdG9yOjMwNzgvOwogICAgfQoKICAgIGxvY2F0aW9uIC9fdHJhbnNhY3RvciB7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBIb3N0ICRob3N0OwogICAgICAgIHByb3h5X3NldF9oZWFkZXIgWC1SZWFsLUlQICRyZW1vdGVfYWRkcjsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtRm9yd2FyZGVkLUZvciAkcHJveHlfYWRkX3hfZm9yd2FyZGVkX2ZvcjsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtRm9yd2FyZGVkLVByb3RvICRzY2hlbWU7CiAgICAgICAgcHJveHlfaHR0cF92ZXJzaW9uIDEuMTsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFVwZ3JhZGUgJGh0dHBfdXBncmFkZTsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIENvbm5lY3Rpb24gInVwZ3JhZGUiOwogICAgICAgIHJld3JpdGUgXi9fdHJhbnNhY3RvcigvLiopJCAkMSBicmVhazsKICAgICAgICBwcm94eV9wYXNzIGh0dHA6Ly90cmFuc2FjdG9yOjMzMzMvOwogICAgfQoKICAgICMgVHJhbnNhY3RvciBXZWJTb2NrZXQgdG9rZW5zIChKV1QgYmVnaW5zIHdpdGggZXlKKS4KICAgIGxvY2F0aW9uIH4gXi9leUogewogICAgICAgIHByb3h5X3NldF9oZWFkZXIgSG9zdCAkaG9zdDsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtUmVhbC1JUCAkcmVtb3RlX2FkZHI7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Gb3IgJHByb3h5X2FkZF94X2ZvcndhcmRlZF9mb3I7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Qcm90byAkc2NoZW1lOwogICAgICAgIHByb3h5X2h0dHBfdmVyc2lvbiAxLjE7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBVcGdyYWRlICRodHRwX3VwZ3JhZGU7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBDb25uZWN0aW9uICJ1cGdyYWRlIjsKICAgICAgICBwcm94eV9wYXNzIGh0dHA6Ly90cmFuc2FjdG9yOjMzMzM7CiAgICB9CgogICAgbG9jYXRpb24gL19yZWtvbmkgewogICAgICAgIHByb3h5X3NldF9oZWFkZXIgSG9zdCAkaG9zdDsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtUmVhbC1JUCAkcmVtb3RlX2FkZHI7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Gb3IgJHByb3h5X2FkZF94X2ZvcndhcmRlZF9mb3I7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Qcm90byAkc2NoZW1lOwogICAgICAgIHJld3JpdGUgXi9fcmVrb25pKC8uKikkICQxIGJyZWFrOwogICAgICAgIHByb3h5X3Bhc3MgaHR0cDovL3Jla29uaTo0MDA0LzsKICAgIH0KCiAgICBsb2NhdGlvbiAvX3N0YXRzIHsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIEhvc3QgJGhvc3Q7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLVJlYWwtSVAgJHJlbW90ZV9hZGRyOwogICAgICAgIHByb3h5X3NldF9oZWFkZXIgWC1Gb3J3YXJkZWQtRm9yICRwcm94eV9hZGRfeF9mb3J3YXJkZWRfZm9yOwogICAgICAgIHByb3h5X3NldF9oZWFkZXIgWC1Gb3J3YXJkZWQtUHJvdG8gJHNjaGVtZTsKICAgICAgICByZXdyaXRlIF4vX3N0YXRzKC8uKikkICQxIGJyZWFrOwogICAgICAgIHByb3h5X3Bhc3MgaHR0cDovL3N0YXRzOjQ5MDAvOwogICAgfQoKICAgIGxvY2F0aW9uIC9fcHJpbnQgewogICAgICAgIHByb3h5X3NldF9oZWFkZXIgSG9zdCAkaG9zdDsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtUmVhbC1JUCAkcmVtb3RlX2FkZHI7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Gb3IgJHByb3h5X2FkZF94X2ZvcndhcmRlZF9mb3I7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Qcm90byAkc2NoZW1lOwogICAgICAgIGNsaWVudF9tYXhfYm9keV9zaXplIDEwME07CiAgICAgICAgcmV3cml0ZSBeL19wcmludCgvLiopJCAkMSBicmVhazsKICAgICAgICBwcm94eV9wYXNzIGh0dHA6Ly9wcmludDo0MDA1LzsKICAgIH0KCiAgICBsb2NhdGlvbiAvX3NpZ24gewogICAgICAgIHByb3h5X3NldF9oZWFkZXIgSG9zdCAkaG9zdDsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtUmVhbC1JUCAkcmVtb3RlX2FkZHI7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Gb3IgJHByb3h5X2FkZF94X2ZvcndhcmRlZF9mb3I7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Qcm90byAkc2NoZW1lOwogICAgICAgIGNsaWVudF9tYXhfYm9keV9zaXplIDEwME07CiAgICAgICAgcmV3cml0ZSBeL19zaWduKC8uKikkICQxIGJyZWFrOwogICAgICAgIHByb3h5X3Bhc3MgaHR0cDovL3NpZ246NDAwNi87CiAgICB9CgogICAgbG9jYXRpb24gL19leHBvcnQgewogICAgICAgIHByb3h5X3NldF9oZWFkZXIgSG9zdCAkaG9zdDsKICAgICAgICBwcm94eV9zZXRfaGVhZGVyIFgtUmVhbC1JUCAkcmVtb3RlX2FkZHI7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Gb3IgJHByb3h5X2FkZF94X2ZvcndhcmRlZF9mb3I7CiAgICAgICAgcHJveHlfc2V0X2hlYWRlciBYLUZvcndhcmRlZC1Qcm90byAkc2NoZW1lOwogICAgICAgIHJld3JpdGUgXi9fZXhwb3J0KC8uKikkICQxIGJyZWFrOwogICAgICAgIHByb3h5X3Bhc3MgaHR0cDovL2V4cG9ydDo0MDA5LzsKICAgIH0KfQo= | base64 -d > /etc/nginx/conf.d/default.conf && exec nginx -g "daemon off;"'
     depends_on:
       - front
       - account
@@ -27,6 +27,9 @@ services:
       - collaborator
       - stats
       - rekoni
+      - print
+      - sign
+      - export
     restart: unless-stopped
 
   cockroach:
@@ -168,6 +171,11 @@ services:
       - ACCOUNTS_URL=http${SECURE:+s}://${HOST_ADDRESS}/_accounts
       - ACCOUNT_PORT=3000
       - QUEUE_CONFIG=redpanda:9092
+      # Platform super-admins (comma-separated). Sign up with this exact email
+      # to get cross-workspace admin.
+      - ADMIN_EMAILS=${ADMIN_EMAILS:-}
+      # Route invite / password-reset / notification emails through the mail pod.
+      - MAIL_URL=http://mail:8097
     restart: unless-stopped
 
   workspace:
@@ -245,11 +253,81 @@ services:
       - GMAIL_URL=http${SECURE:+s}://${HOST_ADDRESS}/_gmail
       - CALENDAR_URL=http${SECURE:+s}://${HOST_ADDRESS}/_calendar
       - TELEGRAM_URL=http${SECURE:+s}://${HOST_ADDRESS}/_telegram
+      - PRINT_URL=http${SECURE:+s}://${HOST_ADDRESS}/_print
+      - SIGN_URL=http${SECURE:+s}://${HOST_ADDRESS}/_sign
+      - EXPORT_URL=http${SECURE:+s}://${HOST_ADDRESS}/_export
       - STORAGE_CONFIG=minio|minio?accessKey=minioadmin&secretKey=minioadmin
       - TITLE=${TITLE:-Huly}
       - DEFAULT_LANGUAGE=${DEFAULT_LANGUAGE:-ar}
       - LAST_NAME_FIRST=${LAST_NAME_FIRST:-true}
       - DISABLED_FEATURES=auto-translate,mailboxes
+    restart: unless-stopped
+
+  # ─── Email delivery ───────────────────────────────────────────────────────
+  # account posts invite/reset/notification emails to this pod, which relays
+  # them via your SMTP server. Set SMTP_* in the environment.
+  mail:
+    image: ${HULY_IMAGE_REGISTRY:-ghcr.io/nexeon-ai}/huly-mail:${HULY_IMAGE_TAG:-ar}
+    environment:
+      - PORT=8097
+      - SOURCE=${SMTP_FROM:-no-reply@${HOST_ADDRESS}}
+      - SMTP_HOST=${SMTP_HOST:-}
+      - SMTP_PORT=${SMTP_PORT:-587}
+      - SMTP_USERNAME=${SMTP_USERNAME:-}
+      - SMTP_PASSWORD=${SMTP_PASSWORD:-}
+      # secure = TLS/465, upgrade = STARTTLS/587, ignore = none/25
+      - SMTP_TLS_MODE=${SMTP_TLS_MODE:-upgrade}
+    restart: unless-stopped
+
+  # ─── Print to PDF ─────────────────────────────────────────────────────────
+  print:
+    image: ${HULY_IMAGE_REGISTRY:-ghcr.io/nexeon-ai}/huly-print:${HULY_IMAGE_TAG:-ar}
+    depends_on:
+      minio:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+    environment:
+      - SECRET=${SECRET}
+      - QUEUE_CONFIG=redpanda:9092
+      - STORAGE_CONFIG=minio|minio?accessKey=minioadmin&secretKey=minioadmin
+      - ACCOUNTS_URL=http://account:3000
+      - STATS_URL=http://stats:4900
+      - FRONT_URL=http://front:8080
+    restart: unless-stopped
+
+  # ─── E-signature ──────────────────────────────────────────────────────────
+  sign:
+    image: ${HULY_IMAGE_REGISTRY:-ghcr.io/nexeon-ai}/huly-sign:${HULY_IMAGE_TAG:-ar}
+    depends_on:
+      minio:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+    environment:
+      - SECRET=${SECRET}
+      - QUEUE_CONFIG=redpanda:9092
+      - STORAGE_CONFIG=minio|minio?accessKey=minioadmin&secretKey=minioadmin
+      - ACCOUNTS_URL=http://account:3000
+      - STATS_URL=http://stats:4900
+    restart: unless-stopped
+
+  # ─── Data export ──────────────────────────────────────────────────────────
+  export:
+    image: ${HULY_IMAGE_REGISTRY:-ghcr.io/nexeon-ai}/huly-export:${HULY_IMAGE_TAG:-ar}
+    depends_on:
+      cockroach:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    environment:
+      - PORT=4009
+      - SECRET=${SECRET}
+      - SERVICE_ID=export-service
+      - DB_URL=${CR_DB_URL}
+      - STATS_URL=http://stats:4900
+      - STORAGE_CONFIG=minio|minio?accessKey=minioadmin&secretKey=minioadmin
+      - ACCOUNTS_URL=http://account:3000
     restart: unless-stopped
 
 volumes:
