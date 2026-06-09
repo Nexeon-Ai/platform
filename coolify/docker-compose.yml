@@ -35,6 +35,12 @@ services:
     volumes:
       - cr_data:/cockroach/cockroach-data
       - cr_certs:/cockroach/certs
+    healthcheck:
+      test: ['CMD-SHELL', "cockroach sql --insecure --host=localhost:26257 -e 'SELECT 1' >/dev/null 2>&1 || exit 1"]
+      interval: 5s
+      timeout: 10s
+      retries: 30
+      start_period: 20s
     restart: unless-stopped
 
   redpanda:
@@ -104,6 +110,13 @@ services:
 
   transactor:
     image: ${HULY_IMAGE_REGISTRY:-ghcr.io/nexeon-ai}/huly-transactor:${HULY_IMAGE_TAG:-ar}
+    depends_on:
+      cockroach:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
     environment:
       - SERVER_PORT=3333
       - SERVER_SECRET=${SECRET}
@@ -119,6 +132,11 @@ services:
 
   collaborator:
     image: ${HULY_IMAGE_REGISTRY:-ghcr.io/nexeon-ai}/huly-collaborator:${HULY_IMAGE_TAG:-ar}
+    depends_on:
+      minio:
+        condition: service_healthy
+      account:
+        condition: service_started
     environment:
       - COLLABORATOR_PORT=3078
       - SECRET=${SECRET}
@@ -129,6 +147,13 @@ services:
 
   account:
     image: ${HULY_IMAGE_REGISTRY:-ghcr.io/nexeon-ai}/huly-account:${HULY_IMAGE_TAG:-ar}
+    depends_on:
+      cockroach:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
     environment:
       - SERVER_PORT=3000
       - SERVER_SECRET=${SECRET}
@@ -145,6 +170,15 @@ services:
 
   workspace:
     image: ${HULY_IMAGE_REGISTRY:-ghcr.io/nexeon-ai}/huly-workspace:${HULY_IMAGE_TAG:-ar}
+    depends_on:
+      cockroach:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+      account:
+        condition: service_started
     environment:
       - SERVER_SECRET=${SECRET}
       - DB_URL=${CR_DB_URL}
@@ -159,6 +193,17 @@ services:
 
   fulltext:
     image: ${HULY_IMAGE_REGISTRY:-ghcr.io/nexeon-ai}/huly-fulltext:${HULY_IMAGE_TAG:-ar}
+    depends_on:
+      cockroach:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+      elastic:
+        condition: service_healthy
+      rekoni:
+        condition: service_started
     environment:
       - SERVER_SECRET=${SECRET}
       - DB_URL=${CR_DB_URL}
@@ -180,6 +225,9 @@ services:
 
   front:
     image: ${HULY_IMAGE_REGISTRY:-ghcr.io/nexeon-ai}/huly-front:${HULY_IMAGE_TAG:-ar}
+    depends_on:
+      account:
+        condition: service_started
     environment:
       - SERVER_PORT=8080
       - SERVER_SECRET=${SECRET}
