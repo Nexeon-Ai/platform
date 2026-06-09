@@ -36,7 +36,7 @@ services:
       - cr_data:/cockroach/cockroach-data
       - cr_certs:/cockroach/certs
     healthcheck:
-      test: ['CMD-SHELL', "cockroach sql --insecure --host=localhost:26257 -e 'SELECT 1' >/dev/null 2>&1 || exit 1"]
+      test: ['CMD-SHELL', "cockroach sql --certs-dir=/cockroach/certs --host=localhost:26257 -e 'SELECT 1' >/dev/null 2>&1 || exit 1"]
       interval: 5s
       timeout: 10s
       retries: 30
